@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Tech Project</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./pages/main/style.css">
 </head>
 <body>
     <h1>Welcome to our E-Commerce Website!</h1>
@@ -13,20 +13,22 @@
         This is the place where all your shopping dreams come true, with an abundance of both quality and quantity. Dive
         into endless choices and find exactly what you’re looking for.</p>
     <br> <a href="#">shop now!</a><br><br>
-        <nav>
-            <ul>
-                <li><a href="./pages/home/Home.html">Home</a></li>
-                <li><a href="./pages/products/Products.html">Products</a></li>
-                <li><a href="./pages/about/About.html">About</a></li>
-                <li><a href="./pages/contact/Contact.html">Contact</a></li>
-                <li><a href="./pages/cart/Cart.html">Cart</a></li>
-                <li><a href="./pages/login/Login.html">Login</a></li>
-                <li>Search: <input type="text" name="search"></li>
-            </ul>
-        </nav>
-    <br>
-    Shop by categories
-    <br>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="./pages/home/Home.html">Home</a></li>
+            <li><a href="./pages/products/Products.html">Products</a></li>
+            <li><a href="./pages/about/About.html">About</a></li>
+            <li><a href="./pages/contact/Contact.html">Contact</a></li>
+            <li><a href="./pages/cart/Cart.html">Cart</a></li>
+            <li><a href="./pages/login/Login.html">Login</a></li>
+            <li>Search: <input type="text" name="search"></li>
+        </ul>
+    </nav>
+    
+    <!-- Shop by Categories -->
+    <h3>Shop by Categories</h3>
     <nav>
         <ul>
             <li><a href="./pages/clothing/Clothing.html">Clothing</a></li>
@@ -35,21 +37,17 @@
             <li><a href="./pages/books/Books.html">Books</a></li>
             <li><a href="./pages/toys/Toys.html">Toys</a></li>
         </ul>
-    </nav><br>
+    </nav>
 
-    <h2>Our store</h2>
-    <br>
-    <img src="#">Product 1
-    <p>$19.99<br><button>Add to cart</button></p>
-    <br>
+    <!-- Products Section -->
+    <h2>Our Store</h2>
+    <div id="product-list"></div>
 
-    <img src="#">Product 2
-    <p>$39.99<br><button>Add to cart</button></p>
-    <br>
-
-    <h2>Your cart</h2>
+    <!-- Cart Section -->
+    <h2>Your Cart</h2>
     <div id="checkout"></div>
     <button>Proceed to Checkout</button>
-    <script src="./script.js"></script>
+
+    <script src="./pages/main/script.js"></script>
 </body>
 </html>

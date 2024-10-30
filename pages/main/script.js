@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <img src="${product.image}" alt="${product.title}">
                 <h2>${product.title}</h2>
                 <p>${product.description}</p>
-                <p class="price">$${product.price}</p>
+                <p class="price">${product.price}</p>
                 <button onclick="addToCart(${product.id})">Add to Cart</button>
             `;
             productList.appendChild(productDiv);
@@ -30,6 +30,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const addToCart = (id) => {
-    // Here, you would add code to handle adding products to the cart
     console.log('Added to cart:', id);
 };
