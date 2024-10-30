@@ -48,7 +48,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Main content styles */
 main {
     padding: 20px;
     text-align: center;
@@ -59,7 +58,6 @@ p {
     margin-top: 20px;
 }
 
-/* Responsive styles */
 @media (max-width: 600px) {
     nav ul li {
         display: block;
