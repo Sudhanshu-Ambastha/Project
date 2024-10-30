@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const productList = document.getElementById('product-list');
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch('https://fakestoreapi.com/products');
+            const response = await fetch('https://fakestoreapi.in/api/products');
             const products = await response.json();
             displayProducts(products);
         } catch (error) {
@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const addToCart = (id) => {
-    // Here, you would add code to handle adding products to the cart
     console.log('Added to cart:', id);
+    // Here, add code to handle adding products to the cart
 };
