@@ -1,5 +1,6 @@
 # Project
 Get it done before (Date: 19th – 24th Sep 2024)
+Trying to implement the fakestoreapi.com API for the project
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,php,mysql)](https://skillicons.dev)
 
