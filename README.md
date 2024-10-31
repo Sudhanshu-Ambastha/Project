@@ -1,6 +1,9 @@
 # Project
-Get it done before (Date: 19th – 24th Sep 2024)
-Trying to implement the [fakestoreapi](https://fakestoreapi.com/) and [DummyJson](https://dummyjson.com/) API for the project
+
+Used apis:-
+- [fakestoreapi](https://fakestoreapi.com/)
+- [DummyJson](https://dummyjson.com/)
+- [OpenLibrary](https://openlibrary.org/subjects/fantasy.json?limit=10)
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,php,mysql)](https://skillicons.dev)
 
