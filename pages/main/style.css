@@ -44,10 +44,10 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:active {
     text-decoration: underline;
 }
-
 main {
     padding: 20px;
     text-align: center;
