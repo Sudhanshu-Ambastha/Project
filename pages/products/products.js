@@ -1,35 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const productList = document.getElementById('product-list');
+// Base URL for the DummyJSON API
+const API_BASE_URL = 'https://dummyjson.com/products';
 
-    const fetchProducts = async () => {
-        try {
-            const response = await fetch('https://fakestoreapi.in/api/products');
-            const products = await response.json();
-            displayProducts(products);
-        } catch (error) {
-            console.error('Error fetching products:', error);
+// Function to fetch all products
+const fetchAllProducts = async () => {
+    try {
+        const response = await fetch(API_BASE_URL);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
-    };
-
-    const displayProducts = (products) => {
-        products.forEach(product => {
-            const productDiv = document.createElement('div');
-            productDiv.classList.add('product');
-            productDiv.innerHTML = `
-                <img src="${product.image}" alt="${product.title}">
-                <h2>${product.title}</h2>
-                <p>${product.description}</p>
-                <p class="price">$${product.price}</p>
-                <button onclick="addToCart(${product.id})">Add to Cart</button>
-            `;
-            productList.appendChild(productDiv);
-        });
-    };
-
-    fetchProducts();
-});
-
-const addToCart = (id) => {
-    console.log('Added to cart:', id);
-    // Here, add code to handle adding products to the cart
+        const data = await response.json();
+        return data.products; // Returns an array of all products
+    } catch (error) {
+        console.error('Error fetching all products:', error);
+        return [];
+    }
 };
+
+// Function to display products
+const displayProducts = (products) => {
+    const mainContainer = document.getElementById('product-container');
+    mainContainer.innerHTML = ''; // Clear any previous content
+
+    products.forEach((product) => {
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('product');
+        productDiv.innerHTML = `
+            <img src="${product.thumbnail}" alt="${product.title}">
+            <h3>${product.title}</h3>
+            <p>Price: $${product.price}</p>
+        `;
+        mainContainer.appendChild(productDiv);
+    });
+};
+
+// Fetch and display all products on DOM load
+document.addEventListener('DOMContentLoaded', async () => {
+    const products = await fetchAllProducts();
+    displayProducts(products);
+});
