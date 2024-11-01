@@ -12,18 +12,6 @@ body {
     animation: backgroundAnimation 10s ease infinite; 
 }
 
-/* @keyframes backgroundAnimation {
-    0% {
-        background: linear-gradient(to right, #8f0440, #255cff);
-    }
-    50% {
-        background: linear-gradient(to right, #550865, #964201); 
-    }
-    100% {
-        background: linear-gradient(to right, #61002a, #01b795);
-    }
-} */
-
 header {
     background: linear-gradient(to right, rgb(247, 108, 129), rgb(251, 218, 30)); 
     color: black;
@@ -32,34 +20,13 @@ header {
     animation: headerAnimation 5s ease infinite; 
 }
 
-/* @keyframes headerAnimation {
-    0% {
-        background: linear-gradient(to right, rgb(231, 2, 36), rgb(254, 216, 1));
-    }
-    50% {
-        background: linear-gradient(to right, rgb(255, 213, 0), rgb(255, 0, 38));
-    }
-    100% {
-        background: linear-gradient(to right, rgba(223, 163, 220, 0.899), rgb(182, 137, 218));
-    }
-} */
+
 
 h1 {
     margin-bottom: 10px;
     animation: textColorChange 3s ease infinite; 
 }
 
-/* @keyframes textColorChange {
-    0% {
-        color: #333;
-    }
-    50% {
-        color: #882e1e; 
-    }
-    100% {
-        color: #e68b8b;
-    }
-} */
 
 nav {
     margin-top: 10px;
@@ -119,13 +86,11 @@ main {
     border-radius: 10px;
 }
 
-/* Product Title Styles */
 .product h3 {
     font-size: 1.2em;
     margin: 10px 0;
 }
 
-/* Product Description Styles */
 .product p {
     font-size: 0.9em;
     margin: 10px 0;
