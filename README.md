@@ -7,6 +7,8 @@ Used apis:-
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,php,mysql)](https://skillicons.dev)
 
+for contributors check [Todo List](./TODO.md)
+
 ## Contributors
 <table>
     <tr>
