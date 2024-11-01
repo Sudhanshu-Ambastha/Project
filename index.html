@@ -6,27 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | E-Commerce Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./pages/main/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to Our E-Commerce Website!</h1>
-        <nav>
+    <div class="navbar">
+        <div class="logo">Your Logo</div>
+        <nav class="right-align">
             <ul>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-house"></i>Home</a></li>
-                <li><a href="./pages/products/Products.html"><i class="fa-solid fa-box"></i>Products</a></li>
-                <li><a href="./pages/about/About.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
-                <li><a href="./pages/contact/Contact.html"><i class="fa-sharp fa-solid fa-address-card"></i>Contact</a></li>
-                <li><a href="./pages/cart/Cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
-                <li><a href="./pages/login/Login.html"><i class="fa-sharp fa-solid fa-right-to-bracket"></i>Login</a></li>
+
+                <li><a href="./pages/products/Products.html">Products</a></li>
+                <li><a href="./pages/about/About.html">About</a></li>
+                <li><a href="./pages/contact/Contact.html">Contact</a></li>
+                <li><a href="./pages/cart/Cart.html">Cart</a></li>
+                <li><a href="./pages/login/Login.html">Login</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <p>Welcome to your one-stop shop for all things you love! Browse our categories to start shopping.</p>
+        
+    </div >
+    <div class="welcome"><h1 class="Landing-text">One Stop<br>To Shop it all!</h1></div>
+    
+
+        
         <div id="product-list"></div>
-    </main>
+    
     <script src="./pages/main/script.js"></script>
 </body>
 
