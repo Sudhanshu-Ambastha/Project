@@ -7,7 +7,7 @@
 
 .welcome {
      
-    background-image: url('https://github.com/Sudhanshu-Ambastha/Web-Tech-Project/blob/main/pages/main/pic.jpg');
+    background-image: url('../main/pic.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
