@@ -85,7 +85,7 @@ main {
     padding: 20px;
 }
 
-/* Button Style */
+
 .btn {
     background-color: #780670;
     color: white;
@@ -100,7 +100,7 @@ main {
     background-color: #65045d;
 }
 
-/* Media Queries for Responsiveness */
+
 @media (max-width: 768px) {
     .Landing-text {
         font-size: 30px;
