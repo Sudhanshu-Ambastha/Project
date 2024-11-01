@@ -12,19 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const displayProducts = (products) => {
-        products.forEach(product => {
-            const productDiv = document.createElement('div');
-            productDiv.classList.add('product');
-            productDiv.innerHTML = `
-                <img src="${product.image}" alt="${product.title}">
-                <h2>${product.title}</h2>
-                <p>${product.description}</p>
-                <p class="price">$${product.price}</p>
-                <button onclick="addToCart(${product.id})">Add to Cart</button>
-            `;
-            productList.appendChild(productDiv);
-        });
-    };
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('product-card');
+        productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.title}" class="product-image">
+            <h2 class="product-title">${product.title}</h2>
+            <p class="product-description">${product.description}</p>
+            <p class="price">$${product.price}</p>
+            <button onclick="addToCart(${product.id})" class="btn">Add to Cart</button>
+        `;
+        productList.appendChild(productDiv);
+    });
+};
+
 
     fetchProducts();
 });
