@@ -27,7 +27,7 @@ background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd60
     position: relative;
     font-size: clamp(60px, 12vw, 150px); 
     color: rgba(239, 229, 229, 0.851);
-    bottom: 160px;
+    bottom: 170px;
     max-width: 90%;
     max-height: fit-content;
     margin: 0 auto;
