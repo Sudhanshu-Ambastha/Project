@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     const fetchBooks = async () => {
         try {
-            const response = await fetch('https://openlibrary.org/subjects/fantasy.json?limit=10');
+            const response = await fetch('https://openlibrary.org/subjects/fantasy.json?limit=12');
             if (!response.ok) {
                 throw new Error('Failed to fetch books');
             }
