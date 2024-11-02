@@ -50,3 +50,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fetchProducts();
 });
+
+const scrollContainer = document.getElementById('product-list-container');
+let scrollAmount = 0;
+
+const scrollHorizontally = () => {
+    scrollAmount += 1; 
+    scrollContainer.scrollLeft = scrollAmount;
+
+
+    if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+        scrollAmount = 0;
+    }
+
+    requestAnimationFrame(scrollHorizontally);
+};
+
+
+scrollHorizontally();
+
