@@ -58,15 +58,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     scrollHorizontally(); 
 
-   document.addEventListener('scroll', () => {
+  document.addEventListener('scroll', () => {
     const aboutImage = document.getElementById('aboutImage');
     const aboutText = document.getElementById('aboutText');
-
     const aboutSection = aboutImage.parentElement.getBoundingClientRect();
+
+
     if (aboutSection.top < window.innerHeight && aboutSection.bottom > 0) {
-        aboutImage.style.transform = 'translateX(0)';
-        aboutImage.style.opacity = '1';
-        aboutText.style.transform = 'translateX(0)';
-        aboutText.style.opacity = '1';
+
+        const scrollEffect = Math.min(1, (window.innerHeight - aboutSection.top) / window.innerHeight);
+        
+        aboutImage.style.transform = `translateX(${scrollEffect * -100}%)`;
+        aboutImage.style.opacity = `${scrollEffect}`;
+        
+        aboutText.style.transform = `translateX(${scrollEffect * 100}%)`;
+        aboutText.style.opacity = `${scrollEffect}`;
+    } else {
+        // Reset styles when not in view
+        aboutImage.style.transform = 'translateX(-100%)';
+        aboutImage.style.opacity = '0';
+        
+        aboutText.style.transform = 'translateX(100%)';
+        aboutText.style.opacity = '0';
     }
 });
