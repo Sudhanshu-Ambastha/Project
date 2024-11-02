@@ -1,13 +1,13 @@
-const landingText = document.getElementById("landingText");
+document.addEventListener('DOMContentLoaded', function () {
+    const landingText = document.getElementById("landingText");
+    const productList = document.getElementById('product-list');
+
+
     window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
-        const viewportHeight = window.innerHeight;
         landingText.style.transform = `translateY(-${scrollY * 0.5}px)`;
     });
 
-    
-document.addEventListener('DOMContentLoaded', function() {
-    const productList = document.getElementById('product-list');
 
     const fetchProducts = async () => {
         try {
@@ -19,28 +19,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-  
 
-const addToCart = (id) => {
-    console.log('Added to cart:', id);
-};
-      const displayProducts = (products) => {
-    products.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.classList.add('product-card');
-        productDiv.innerHTML = `
-            <img src="${product.image}" alt="${product.title}" class="product-image">
-            <h2 class="product-title">${product.title}</h2>
-            <p class="product-description">${product.description}</p>
-            <p class="price">$${product.price}</p>
-            <button onclick="addToCart(${product.id})" class="btn">Add to Cart</button>
-        `;
-        productList.appendChild(productDiv);
+    const displayProducts = (products) => {
+        products.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('product-card');
+            productDiv.innerHTML = `
+                <img src="${product.image}" alt="${product.title}" class="product-image">
+                <h2 class="product-title">${product.title}</h2>
+                <p class="product-description">${product.description}</p>
+                <p class="price">$${product.price}</p>
+                <button data-id="${product.id}" class="btn">Add to Cart</button>
+            `;
+            productList.appendChild(productDiv);
+        });
+    };
+
+
+    const addToCart = (id) => {
+        console.log('Added to cart:', id);
+    };
+
+
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('btn')) {
+            const productId = event.target.getAttribute('data-id');
+            addToCart(productId);
+        }
     });
-};
-
 
     fetchProducts();
 });
-    
-
