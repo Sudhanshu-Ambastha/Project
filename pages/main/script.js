@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const scrollEffect = Math.min(1, (window.innerHeight - aboutSection.top) / window.innerHeight);
         
-        aboutImage.style.transform = `translateX(${scrollEffect * -100}%)`;
+        aboutImage.style.transform = `translateX(${scrollEffect * 100}%)`;
         aboutImage.style.opacity = `${scrollEffect}`;
         
-        aboutText.style.transform = `translateX(${scrollEffect * 100}%)`;
+        aboutText.style.transform = `translateX(${scrollEffect * -105}%)`;
         aboutText.style.opacity = `${scrollEffect}`;
     } else {
 
