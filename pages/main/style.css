@@ -42,6 +42,7 @@
     align-items: center;
     justify-content: space-between;
     position: fixed; 
+    height: 80px;
     top: 0;
     width: 100%;
     background: rgba(50, 47, 47, 0.8);
