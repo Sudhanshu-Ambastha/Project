@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         aboutText.style.transform = `translateX(${scrollEffect * 100}%)`;
         aboutText.style.opacity = `${scrollEffect}`;
     } else {
-        // Reset styles when not in view
+
         aboutImage.style.transform = 'translateX(-100%)';
         aboutImage.style.opacity = '0';
         
