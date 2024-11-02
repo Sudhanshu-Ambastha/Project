@@ -182,12 +182,26 @@ main {
         padding: 0; 
     }
 }
+
+
+#product-list-container {
+    overflow-x: auto;
+    white-space: nowrap; 
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+#product-list {
+    display: flex;
+    gap: 20px;
+}
+
 .product-card {
+    flex: 0 0 auto; 
+    width: 200px; 
     border: 1px solid #ddd;
     padding: 16px;
     text-align: center;
-    margin: 10px;
-    width: 200px;
 }
 .product-image {
     width: 100%;
