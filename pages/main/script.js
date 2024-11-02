@@ -19,7 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    const displayProducts = (products) => {
+  
+
+const addToCart = (id) => {
+    console.log('Added to cart:', id);
+};
+      const displayProducts = (products) => {
     products.forEach(product => {
         const productDiv = document.createElement('div');
         productDiv.classList.add('product-card');
@@ -37,9 +42,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     fetchProducts();
 });
-
-const addToCart = (id) => {
-    console.log('Added to cart:', id);
-};
     
 
