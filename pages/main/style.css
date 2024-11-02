@@ -153,6 +153,7 @@ main {
 }
 
 
+
 @media (max-width: 768px) {
     .Landing-text {
         font-size: 30px;
@@ -181,9 +182,17 @@ main {
         padding: 0; 
     }
 }
-
-
-
+.product-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    text-align: center;
+    margin: 10px;
+    width: 200px;
+}
+.product-image {
+    width: 100%;
+    height: auto;
+}
 
 
 
