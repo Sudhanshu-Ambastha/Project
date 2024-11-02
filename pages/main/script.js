@@ -33,3 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
 const addToCart = (id) => {
     console.log('Added to cart:', id);
 };
+    const landingText = document.getElementById("landingText");
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        landingText.style.transform = `translateY(-${scrollY * 0.5}px)`;
+    });
+
