@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const landingText = document.getElementById("landingText");
     const productList = document.getElementById('product-list');
-
+    const scrollContainer = document.getElementById('product-list-container'); 
 
     window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
         landingText.style.transform = `translateY(-${scrollY * 0.5}px)`;
     });
-
 
     const fetchProducts = async () => {
         try {
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error fetching products:', error);
         }
     };
-
 
     const displayProducts = (products) => {
         products.forEach(product => {
@@ -35,11 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
-
     const addToCart = (id) => {
         console.log('Added to cart:', id);
     };
-
 
     document.addEventListener('click', (event) => {
         if (event.target.classList.contains('btn')) {
@@ -48,34 +44,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    fetchProducts();
-});
+    fetchProducts(); 
 
-const scrollHorizontally = () => {
-    scrollContainer.scrollLeft += 1; 
+    const scrollHorizontally = () => {
+        scrollContainer.scrollLeft += 1; 
 
-    if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-        scrollContainer.scrollLeft = 0; 
-    }
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+            scrollContainer.scrollLeft = 0; 
+        }
 
-    requestAnimationFrame(scrollHorizontally);
-};
+        requestAnimationFrame(scrollHorizontally);
+    };
 
-fetchProducts().then(() => {
     scrollHorizontally(); 
+
+    document.addEventListener('scroll', () => {
+        const aboutImage = document.getElementById('aboutImage');
+        const aboutText = document.getElementById('aboutText');
+
+        const aboutSection = aboutImage.parentElement.getBoundingClientRect();
+        if (aboutSection.top < window.innerHeight && aboutSection.bottom > 0) {
+            aboutImage.style.transform = 'translateX(0)';
+            aboutImage.style.opacity = '1';
+
+            aboutText.style.transform = 'translateX(0)';
+            aboutText.style.opacity = '1';
+        }
+    });
 });
-document.addEventListener('scroll', () => {
-    const aboutImage = document.getElementById('aboutImage');
-    const aboutText = document.getElementById('aboutText');
-
-    const aboutSection = aboutImage.parentElement.getBoundingClientRect();
-    if (aboutSection.top < window.innerHeight && aboutSection.bottom > 0) {
-        aboutImage.style.transform = 'translateX(0)';
-        aboutImage.style.opacity = '1';
-
-        aboutText.style.transform = 'translateX(0)';
-        aboutText.style.opacity = '1';
-    }
-});
-
-
