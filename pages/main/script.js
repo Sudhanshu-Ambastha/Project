@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const landingText = document.getElementById("landingText");
     const productList = document.getElementById('product-list');
     const scrollContainer = document.getElementById('product-list-container'); 
+});
 
     window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
@@ -27,8 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h2 class="product-title">${product.title}</h2>
                 <p class="product-description">${product.description}</p>
                 <p class="price">$${product.price}</p>
-                <button data-id="${product.id}" class="btn">Add to Cart</button>
-            `;
+                <button data-id="${product.id}" class="btn">Add to Cart</button>`;
             productList.appendChild(productDiv);
         });
     };
