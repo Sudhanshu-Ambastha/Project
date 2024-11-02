@@ -189,7 +189,9 @@ main {
     white-space: nowrap;
     padding: 20px;
     scroll-behavior: smooth;
+    width: 100%;
 }
+
 
 #product-list {
     display: flex;
