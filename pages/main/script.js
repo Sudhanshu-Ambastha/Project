@@ -1,12 +1,6 @@
 
 
-    const landingText = document.getElementById("landingText");
-    window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY;
-        const viewportHeight = window.innerHeight;
-        landingText.style.transform = `translateY(-${scrollY * 0.5}px)`;
-    });
-
+    
 document.addEventListener('DOMContentLoaded', function() {
     const productList = document.getElementById('product-list');
 
