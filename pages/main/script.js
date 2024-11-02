@@ -58,17 +58,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     scrollHorizontally(); 
 
-    document.addEventListener('scroll', () => {
-        const aboutImage = document.getElementById('aboutImage');
-        const aboutText = document.getElementById('aboutText');
+   document.addEventListener('scroll', () => {
+    const aboutImage = document.getElementById('aboutImage');
+    const aboutText = document.getElementById('aboutText');
 
-        const aboutSection = aboutImage.parentElement.getBoundingClientRect();
-        if (aboutSection.top < window.innerHeight && aboutSection.bottom > 0) {
-            aboutImage.style.transform = 'translateX(0)';
-            aboutImage.style.opacity = '1';
-
-            aboutText.style.transform = 'translateX(0)';
-            aboutText.style.opacity = '1';
-        }
-    });
+    const aboutSection = aboutImage.parentElement.getBoundingClientRect();
+    if (aboutSection.top < window.innerHeight && aboutSection.bottom > 0) {
+        aboutImage.style.transform = 'translateX(0)';
+        aboutImage.style.opacity = '1';
+        aboutText.style.transform = 'translateX(0)';
+        aboutText.style.opacity = '1';
+    }
 });
