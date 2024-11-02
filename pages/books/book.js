@@ -38,5 +38,4 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 window.addToCart = (id) => {
     console.log('Added to cart:', id);
-    // Handle adding book to cart
 };
