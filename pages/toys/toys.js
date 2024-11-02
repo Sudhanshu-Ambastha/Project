@@ -1,6 +1,6 @@
 const fetchToyData = async () => {
     try {
-        const response = await fetch('../../assets/toys/toys.json'); 
+        const response = await fetch('./toys.json'); 
         if (!response.ok) {
             throw new Error(`Failed to fetch toy data: ${response.statusText}`);
         }

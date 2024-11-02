@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch('https://dummyjson.com/products/category/home-decoration'); // DummyJSON API for home decoration
+            const response = await fetch('https://dummyjson.com/products/category/home-decoration'); 
             if (!response.ok) {
                 throw new Error('Failed to fetch products');
             }

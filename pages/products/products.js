@@ -1,7 +1,5 @@
-// Base URL for the DummyJSON API
 const API_BASE_URL = 'https://dummyjson.com/products';
 
-// Function to fetch all products
 const fetchAllProducts = async () => {
     try {
         const response = await fetch(API_BASE_URL);
@@ -9,17 +7,16 @@ const fetchAllProducts = async () => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        return data.products; // Returns an array of all products
+        return data.products; 
     } catch (error) {
         console.error('Error fetching all products:', error);
         return [];
     }
 };
 
-// Function to display products
 const displayProducts = (products) => {
     const mainContainer = document.getElementById('product-container');
-    mainContainer.innerHTML = ''; // Clear any previous content
+    mainContainer.innerHTML = ''; 
 
     products.forEach((product) => {
         const productDiv = document.createElement('div');
@@ -33,7 +30,6 @@ const displayProducts = (products) => {
     });
 };
 
-// Fetch and display all products on DOM load
 document.addEventListener('DOMContentLoaded', async () => {
     const products = await fetchAllProducts();
     displayProducts(products);

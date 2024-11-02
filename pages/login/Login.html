@@ -12,23 +12,29 @@
         <h1>Login</h1>
         <nav>
             <ul>
-                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i>Home</a></li>
-                <li><a href="../products/Products.html"><i class="fa-solid fa-box"></i>Products</a></li>
-                <li><a href="../about/About.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
-                <li><a href="../contact/Contact.html"><i class="fa-sharp fa-solid fa-address-card"></i>Contact</a></li>
-                <li><a href="../cart/Cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-right-to-bracket"></i>Login</a></li>
+                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i> Home</a></li>
+                <li><a href="../products/Products.html"><i class="fa-solid fa-box"></i> Products</a></li>
+                <li><a href="../about/About.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                <li><a href="../contact/Contact.html"><i class="fa-sharp fa-solid fa-address-card"></i> Contact</a></li>
+                <li><a href="../cart/Cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <form action="#" method="post">
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username" required><br>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required><br>
-            <button type="submit">Login</button>
-        </form>
+        <div class="login-container">
+            <form action="#" method="post">
+                <h2>Welcome Back</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="input-field" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="input-field" required>
+
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="../signup/Signup.html">Sign Up</a></p>
+            </form>
+        </div>
     </main>
     <script src="./login.js"></script>
 </body>

@@ -53,7 +53,50 @@ h2 {
     margin-top: 20px;
 }
 
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    margin: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
 .product img {
     width: 100%;
     height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.product h3 {
+    font-size: 1.25em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product p {
+    font-size: 0.9em;
+    color: #666;
+    padding: 0 10px;
+}
+
+.product button {
+    background-color: #f86e4b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #feb47b;
 }
