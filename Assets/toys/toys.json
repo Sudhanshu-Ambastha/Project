@@ -1,0 +1,20 @@
+[
+    {
+        "label": "Toy Truck",
+        "image": "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492908386/665/492908386-1_5359.webp",
+        "description": "A colorful toy truck perfect for kids.",
+        "price": 15.99
+    },
+    {
+        "label": "Toy Car",
+        "image": "https://www.patoys.in/cdn/shop/files/patoys-kids-ride-on-jeep-four-wheel-drive-ride-ons-44-big-size-toy-car-wn1166-527880.jpg?v=1721704920",
+        "description": "A fast toy car with sleek design.",
+        "price": 12.49
+    },
+    {
+        "label": "Pikachu Plush",
+        "image": "https://www.giftify.in/cdn/shop/files/PhotofromGiftify_1_57d47235-9ceb-4792-bd9d-84672384e7d1.jpg?v=1685038686",
+        "description": "A soft and cuddly Pikachu plush toy.",
+        "price": 19.99
+    }
+]
