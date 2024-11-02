@@ -5,15 +5,16 @@
     font-family: "Open Sans", sans-serif;
 }
 
+
 .welcome {
-    background-image: url('pic.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     padding: 100px 20px; 
     color: #ffffff;
     text-align: center;
-    min-height: 100vh; 
+    min-height: calc(100vh - 80px); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,12 +23,9 @@
 
 
 .Landing-text {
-    position: relative;
     font-size: clamp(60px, 12vw, 150px); 
     color: rgba(239, 229, 229, 0.851);
-    bottom: 190px;
     max-width: 90%;
-    max-height: fit-content;
     margin: 0 auto;
 }
 
@@ -36,13 +34,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
+    position: fixed; 
     top: 0;
     width: 100%;
-    background: rgba(50, 47, 47, 0.8); 
+    background: rgba(50, 47, 47, 0.8);
     color: #ffffff;
     padding: 20px;
-    z-index: 1000; 
+    z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -71,13 +69,14 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a:active {
     text-decoration: underline;
-    color:rgba(0, 0, 0, 0.436);
-    transform: scale(1.5);
+    color: rgba(0, 0, 0, 0.436);
+    transform: scale(1.1);
 }
 
 body {
     padding-top: 80px; 
 }
+
 
 main {
     text-align: center;
@@ -100,6 +99,52 @@ main {
 }
 
 
+.About {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+
+.About-img {
+    width: 50%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+.About-text {
+    width: 50%;
+    padding: 0 20px;
+}
+
+
+.About h2 {
+    font-size: 35px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.About p {
+    line-height: 1.6;
+    color: #555;
+}
+@media (min-width: 1024px) {
+    .About h2 {
+        font-size: 40px; 
+    }
+
+    .About p {
+        font-size: 20px;
+    }
+}
+
+
 @media (max-width: 768px) {
     .Landing-text {
         font-size: 30px;
@@ -114,53 +159,30 @@ main {
         flex-direction: column;
         gap: 10px;
     }
-}
-.product-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    .About {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .About-img {
+        width: 80%; 
+    }
+
+    .About-text {
+        width: 100%;
+        padding: 0; 
+    }
 }
 
-.product-card:hover {
-    transform: scale(1.05);
+
+.Landing-text {
+    position: relative;
+    font-size: clamp(60px, 12vw, 150px);
+    color: rgba(239, 229, 229, 0.851);
+    max-width: 90%;
+    margin: 0 auto;
+    transition: transform 0.1s ease-out; 
 }
 
-.product-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
 
-.product-title {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
 
-.product-description {
-    font-size: 1rem;
-    color: #555;
-}
-
-.price {
-    font-size: 1.2rem;
-    color: #000;
-    margin: 10px 0;
-}
-
-.btn {
-    background-color: #780670;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #65045d;
-}
