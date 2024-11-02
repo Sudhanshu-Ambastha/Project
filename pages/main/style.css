@@ -207,8 +207,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
-    background-color: #fff; 
+    overflow: hidden; 
+    background-color: #fff;
 }
 
 .product-image {
@@ -231,19 +231,22 @@ main {
 .product-description {
     font-size: 0.85rem;
     color: #555;
+    margin-bottom: 10px;
     height: 40px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-    margin-bottom: 10px;
 }
 
 .price {
     font-size: 1rem;
     color: #333;
     margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .btn {
@@ -260,7 +263,3 @@ main {
 .btn:hover {
     background-color: #65045d;
 }
-
-
-
-
