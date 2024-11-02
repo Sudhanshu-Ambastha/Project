@@ -51,21 +51,18 @@ document.addEventListener('DOMContentLoaded', function () {
     fetchProducts();
 });
 
-const scrollContainer = document.getElementById('product-list-container');
-let scrollAmount = 0;
-
 const scrollHorizontally = () => {
-    scrollAmount += 1; 
-    scrollContainer.scrollLeft = scrollAmount;
+    scrollContainer.scrollLeft += 1; 
 
-
-    if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-        scrollAmount = 0;
+    if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+        scrollContainer.scrollLeft = 0; 
     }
 
     requestAnimationFrame(scrollHorizontally);
 };
 
+fetchProducts().then(() => {
+    scrollHorizontally(); 
+});
 
-scrollHorizontally();
 
