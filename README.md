@@ -34,7 +34,7 @@ This project is an e-commerce website developed as part of a college assignment,
 
 ## APIs:
 - [FakeStore API](https://fakestoreapi.com/): Used to fetch Clothing, Jewellery, Electronics.
-- [DummyJson](https://dummyjson.com/): Used to fetch product details.
+- [DummyJson](https://dummyjson.com/): Used to fetch other product details.
 - [OpenLibrary API](https://openlibrary.org/subjects/fantasy.json?limit=10): Used to fetch book data.
 
 ## Installation Instructions
