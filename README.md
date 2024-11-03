@@ -1,13 +1,67 @@
-# Project
+# E-Commerce Website
 
-Used apis:-
-- [fakestoreapi](https://fakestoreapi.com/)
-- [DummyJson](https://dummyjson.com/)
-- [OpenLibrary](https://openlibrary.org/subjects/fantasy.json?limit=10)
+This project is an e-commerce website developed as part of a college assignment, aiming to provide hands-on experience in web development. It demonstrates key concepts including HTML, CSS, JavaScript, API integration, PHP and MySQL allowing students to apply their knowledge of front-end technologies. The site mimics a real-world e-commerce platform, showcasing product categorization, display, and purchase processes, and providing an interactive online shopping experience with features like a shopping cart and basic checkout process.
 
+## Table of Contents
+
+- [E-Commerce Website](#e-commerce-website)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [APIs:](#apis)
+  - [Installation Instructions](#installation-instructions)
+  - [Usage](#usage)
+  - [Contributors](#contributors)
+
+## Features
+
+- **Product Categories**: Explore various categories, including Clothing, Electronics, Books, Home & Garden, Toys, and Jewellery.
+- **Dynamic Product Loading**: Fetch and display product data from external APIs based on selected categories.
+- **Shopping Cart Functionality**: Add and remove products from the cart, with persistence using `localStorage`.
+- **Responsive Design**: The site is designed to be mobile-friendly, ensuring a good user experience on all devices.
+- **Basic Checkout Process**: Proceed to checkout after selecting products, with a placeholder for payment processing integration
+- **API Integration**: Utilize APIs for fetching product data, ensuring dynamic and up-to-date content
+
+## Technologies Used
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,php,mysql)](https://skillicons.dev)
+- **HTML**: For the structure of the web pages.
+- **Font Awesome**: For incorporating icons easily.
+- **CSS**: For styling the pages, ensuring a user-friendly interface.
+- **JavaScript**: For adding interactivity and dynamic content.
+- **PHP**: For server-side scripting and API integration.
+- **MySQL**: For database operations.
 
-for contributors check [Todo List](./TODO.md)
+
+## APIs:
+- [FakeStore API](https://fakestoreapi.com/): Used to fetch Clothing, Jewellery, Electronics.
+- [DummyJson](https://dummyjson.com/): Used to fetch product details.
+- [OpenLibrary API](https://openlibrary.org/subjects/fantasy.json?limit=10): Used to fetch book data.
+
+## Installation Instructions
+1. Clone the Repository:
+    ```
+    git clone https://github.com/Sudhanshu-Ambastha/Web-Tech-Project.git
+    ```
+2. Navigate to Project Directory:
+   ```
+   cd PROJECT
+   ```
+3. Open `index.html` in a Web Browser: Open the `index.html` file in any modern web browser to start using the website.
+   
+## Usage
+Adding Products to the Cart
+- Visit any category page (e.g., Clothing).
+- Click on the "Add to Cart" button for a product to add it to your shopping cart.
+- Access the Cart page to view your selected items.
+  
+Removing Products from the Cart
+- Go to the Cart page.
+- Click on the Remove button next to any item to remove it from your cart.
+- Click Proceed to Checkout to view the checkout process (currently implemented as a placeholder).
+  
+Data Persistence
+
+Products added to the cart are stored in `localStorage`, enabling the cart to retain items even after a page refresh.
 
 ## Contributors
 <table>
@@ -46,6 +100,3 @@ for contributors check [Todo List](./TODO.md)
     </td>
     </tr>
 </table>
-
-## Note:-
-please give this repo a 🌟 for every contributors
