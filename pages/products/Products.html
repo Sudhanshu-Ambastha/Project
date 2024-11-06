@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +9,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./products.css">
 </head>
+
 <body>
-    <header>
-        <h1>Our Products</h1>
-        <nav>
+    <header class="navbar">
+        <div class="logo">ShopSpot</div>
+        <nav class="right-align">
             <ul>
-               <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i>Home</a></li>
-                <li><a href="#"><i class="fa-solid fa-box"></i>Products</a></li>
-                <li><a href="../contact/Contact.html"><i class="fa-sharp fa-solid fa-address-card"></i>Contact</a></li>
-                <li><a href="../cart/Cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
-                <li><a href="../login/Login.html"><i class="fa-sharp fa-solid fa-right-to-bracket"></i>Login</a></li> 
-                <li><a href="../books/Books.html"><i class="fa-solid fa-book"></i>Books</a></li>
-                <li><a href="../clothing/Clothing.html"><i class="fa-solid fa-shirt"></i>Clothing</a></li>
-                <li><a href="../electronics/Electronics.html"><i class="fa-solid fa-laptop-medical"></i>Electronics</a></li>
-                <li><a href="../home&garden/Home&Garden.html"><i class="fa-solid fa-seedling"></i>Home & Garden</a></li>
-                <li><a href="../jwellery/Jewellery.html"><i class="fa-solid fa-gem"></i>Jewellery</a></li>
-                <li><a href="../toys/Toys.html"><i class="fa-solid fa-gamepad"></i>Toys</a></li>
+                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-box"></i> Products</a></li>
+                <li><a href="../contact/Contact.html"><i class="fa-sharp fa-solid fa-address-card"></i> Contact</a></li>
+                <li><a href="../cart/Cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li><a href="../login/Login.html"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="product-container"></main>
-    <script type="module" src="./products.js"></script> 
-</body>
-</html>
+    <main>
+        <section class="product-header">
+            <h1>Our Products</h1>
+            <p>Explore a variety of high-quality products tailored to meet all your needs!</p>
+        </section>
+        
+        <section id="product-container" class="product-grid">
 
+        </section>
+    </main>
+
+    <script type="module" src="./products.js"></script>
+</body>
+
+</html>
