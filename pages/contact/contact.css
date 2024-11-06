@@ -1,7 +1,7 @@
-
+/* Global Styles */
 body {
     font-family: "Open Sans", sans-serif;
-    background: linear-gradient(to right, #f0e5cf, #f4f1de);
+    background: linear-gradient(to right, #f0e5cf, #f4f1de); 
     margin: 0;
     padding: 0;
     color: #333;
@@ -16,7 +16,7 @@ header {
     height: 60px;
     top: 0;
     width: 100%;
-    background: rgba(50, 47, 47, 0.9);
+    background: rgba(50, 47, 47, 0.9); 
     color: #ffffff;
     padding: 10px 20px;
     z-index: 1000;
@@ -24,7 +24,6 @@ header {
 }
 
 header .logo h1 {
-    Display:inline;
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -45,19 +44,19 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #ffeb3b;
+    color: #ffeb3b; 
 }
 
 
 .contact-header {
     text-align: center;
-    padding: 100px 20px 30px; 
+    padding: 100px 20px 30px;
     background-color: #f4f1de;
 }
 
 .contact-header h1 {
     font-size: 2.5rem;
-    color: #0f4c75;
+    color: #0f4c75; 
     margin-bottom: 10px;
 }
 
@@ -114,7 +113,7 @@ main {
 }
 
 .btn {
-    background-color: #780670;
+    background-color: #780670; 
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -128,5 +127,5 @@ main {
 }
 
 .btn:hover {
-    background-color: #65045d;
+    background-color: #65045d; 
 }
