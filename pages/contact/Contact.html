@@ -9,29 +9,34 @@
     <link rel="stylesheet" href="./contact.css">
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-        <nav>
+    <header class="navbar">
+        <div class="logo"><h1>ShopSpot</h1></div>
+        <nav class="right-align">
             <ul>
-                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i>Home</a></li>
-                <li><a href="../products/Products.html"><i class="fa-solid fa-box"></i>Products</a></li>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-address-card"></i>Contact</a></li>
-                <li><a href="../cart/Cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
-                <li><a href="../login/Login.html"><i class="fa-sharp fa-solid fa-right-to-bracket"></i>Login</a></li>
+                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i> Home</a></li>
+                <li><a href="../products/Products.html"><i class="fa-solid fa-box"></i> Products</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-address-card"></i> Contact</a></li>
+                <li><a href="../cart/Cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li><a href="../login/Login.html"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a></li>
             </ul>   
         </nav>
     </header>
     <main>
-        <p>Feel free to reach out to us with any questions or feedback!</p>
-        <form id="contactForm" action="#" method="post">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required></textarea><br>
-            <button type="submit">Send Message</button>
-        </form>
+        <section class="contact-header">
+            <h1>Contact Us</h1>
+            <p>Feel free to reach out to us with any questions or feedback!</p>
+        </section>
+        <section class="contact-form-section">
+            <form id="contactForm" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
     </main>
     <script src="./contact.js"></script>
 </body>
