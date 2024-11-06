@@ -9,29 +9,36 @@
     <link rel="stylesheet" href="./cart.css">
 </head>
 <body>
-    <header>
-        <h1>Your Cart</h1>
-        <nav>
+    <header class="navbar">
+        <div class="logo"><h1>ShopSpot</h1></div>
+        <nav class="right-align">
             <ul>
-                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i>Home</a></li>
-                <li><a href="../electronics/Electronics.html"><i class="fa-solid fa-laptop-medical"></i>Electronics</a></li>
-                <li><a href="../contact/Contact.html"><i class="fa-sharp fa-solid fa-address-card"></i>Contact</a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
-                <li><a href="../login/Login.html"><i class="fa-sharp fa-solid fa-right-to-bracket"></i>Login</a></li>
+                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i> Home</a></li>
+                <li><a href="../products/Products.html"><i class="fa-solid fa-box"></i> Products</a></li>
+                <li><a href="../contact/Contact.html"><i class="fa-sharp fa-solid fa-address-card"></i> Contact</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li><a href="../login/Login.html"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <p>Items in your cart:</p>
-        <div class="cart-item">
-            <p>Product 1 - $19.99</p>
-            <button><i class= "fa-solid fa-trash-can"></i>Remove</button>
-        </div>
-        <div class="cart-item">
-            <p>Product 2 - $39.99</p>
-            <button><i class= "fa-solid fa-trash-can"></i>Remove</button>
-        </div>
-        <button>Proceed to Checkout</button>
+        <section class="cart-header">
+            <h1>Your Cart</h1>
+            <p>Review your items before proceeding to checkout.</p>
+        </section>
+        <section class="cart-items">
+            <div class="cart-item">
+                <p>Product 1 - $19.99</p>
+                <button class="remove-btn"><i class="fa-solid fa-trash-can"></i> Remove</button>
+            </div>
+            <div class="cart-item">
+                <p>Product 2 - $39.99</p>
+                <button class="remove-btn"><i class="fa-solid fa-trash-can"></i> Remove</button>
+            </div>
+        </section>
+        <section class="cart-footer">
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </section>
     </main>
     <script src="./cart.js"></script>
 </body>
