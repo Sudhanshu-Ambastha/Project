@@ -5,6 +5,20 @@ font-family: "Open Sans", sans-serif;
     padding: 0;
     color: #333;
 }
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; 
+    height: 80px;
+    top: 0;
+    width: 100%;
+    background: rgba(50, 47, 47, 0.8);
+    color: #ffffff;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
 
 header {
     background: linear-gradient(to right, #0f4c75, #3282b8); 
