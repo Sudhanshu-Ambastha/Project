@@ -10,7 +10,10 @@ font-family: "Open Sans", sans-serif;
 
 }
 .product-header{
-    margin-top:5px;
+
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f1de;
 
 }
 
