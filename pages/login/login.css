@@ -1,118 +1,131 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 
 body {
-    background: linear-gradient(to right, #d4fc79, #96e6a1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px; 
-}
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-header h1 {
-    margin-bottom: 5px;
-}
-
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    color: #f0db4f;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin-top: -80px; 
-}
-
-.login-container {
-    background-color: white;
-    padding: 2rem;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-form h2 {
-    margin-bottom: 1rem;
+    font-family: "Open Sans", sans-serif;
+    background: linear-gradient(to right, #f0e5cf, #f4f1de);
+    margin: 0;
+    padding: 0;
     color: #333;
 }
 
-form label {
-    display: block;
-    text-align: left;
-    margin: 0.5rem 0 0.2rem;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    height: 60px;
+    top: 0;
+    width: 100%;
+    background: rgba(50, 47, 47, 0.9);
+    color: #ffffff;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo h1 {
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #555;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+
+main {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+
+.login-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 2rem;
+    color: #0f4c75;
+    margin-bottom: 20px;
+}
+
+
+label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: inline-block;
 }
 
 .input-field {
     width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    color: #333;
 }
 
-form button {
-    background-color: #4ca1af;
-    color: white;
-    border: none;
-    padding: 0.8rem;
-    border-radius: 5px;
+.input-field:focus {
+    border-color: #780670;
+    outline: none;
+}
+
+
+button {
     width: 100%;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 12px;
+    background-color: #780670; 
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-form button:hover {
-    background-color: #2c3e50;
+button:hover {
+    background-color: #65045d; 
 }
 
-form p {
-    margin-top: 1rem;
-    font-size: 0.9rem;
+
+p {
+    font-size: 1rem;
+    color: #555;
 }
 
-form p a {
-    color: #4ca1af;
+p a {
+    color: #780670;
+    font-weight: bold;
     text-decoration: none;
 }
 
-form p a:hover {
-    text-decoration: underline;
+p a:hover {
+    color: #65045d; 
 }
