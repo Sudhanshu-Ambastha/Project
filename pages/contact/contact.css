@@ -24,6 +24,7 @@ header {
 }
 
 header .logo h1 {
+    Display:inline;
     font-size: 1.8rem;
     font-weight: bold;
 }
