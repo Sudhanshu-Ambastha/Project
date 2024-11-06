@@ -5,7 +5,9 @@ font-family: "Open Sans", sans-serif;
     padding: 0;
     color: #333;
 }
-.right-align{
+
+
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,13 +20,6 @@ font-family: "Open Sans", sans-serif;
     padding: 20px;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-header {
-    background: linear-gradient(to right, #0f4c75, #3282b8); 
-    color: white;
-    padding: 20px;
-    text-align: center;
 }
 
 header h1 {
