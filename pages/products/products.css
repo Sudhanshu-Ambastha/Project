@@ -9,7 +9,10 @@ font-family: "Open Sans", sans-serif;
     display:inline;
 
 }
+.product-header{
+    margin-top:5px;
 
+}
 
 header {
     display: flex;
