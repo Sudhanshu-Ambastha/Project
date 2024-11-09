@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 throw new Error('Failed to fetch products');
             }
             const products = await response.json();
-            displayProducts(products.products); // Ensure you access the correct data structure
+            displayProducts(products.products); 
         } catch (error) {
             console.error('Error fetching products:', error);
             productsContainer.innerHTML = '<p>Error fetching products. Please try again later.</p>';
@@ -37,5 +37,4 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 window.addToCart = (id) => {
     console.log('Added to cart:', id);
-    // Handle adding product to cart
 };
