@@ -26,20 +26,13 @@
             <h1>Your Cart</h1>
             <p>Review your items before proceeding to checkout.</p>
         </section>
-        <section class="cart-items">
-            <div class="cart-item">
-                <p>Product 1 - $19.99</p>
-                <button class="remove-btn"><i class="fa-solid fa-trash-can"></i> Remove</button>
-            </div>
-            <div class="cart-item">
-                <p>Product 2 - $39.99</p>
-                <button class="remove-btn"><i class="fa-solid fa-trash-can"></i> Remove</button>
-            </div>
+        <section id="cart-list" class="cart-items">
         </section>
         <section class="cart-footer">
-            <button class="checkout-btn">Proceed to Checkout</button>
+            <div id="total-price" class="total-price">Total: $0.00</div>
+            <button id="proceed-checkout" class="checkout-btn">Proceed to Checkout</button>
         </section>
-    </main>
+    </main> 
     <script src="./cart.js"></script>
 </body>
 </html>
