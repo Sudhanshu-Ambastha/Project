@@ -47,7 +47,7 @@ body {
         padding: 0;
         display: flex;
         flex-wrap: wrap;
-        justify-content: left;
+        justify-content: center;
     }
     
     nav ul li {
