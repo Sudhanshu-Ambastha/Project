@@ -1,4 +1,3 @@
-/* General Reset and Styling */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body Background */
 body {
     background: linear-gradient(to right, #f0f4f8, #e8eaf6); 
     display: flex;
@@ -14,7 +12,6 @@ body {
     align-items: center;
 }
 
-/* Header Styling */
 header {
     width: 100%;
     background: linear-gradient(to right, #4a148c, #7b1fa2); 
@@ -26,23 +23,47 @@ header {
     margin: 0;
 }
 
+header h1 {
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffeb3b; 
+}
+
 /* Sidebar Styling */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Start hidden */
+    left: -250px; /* Hidden off-screen initially */
     width: 250px;
     height: 100%;
-    background-color: #333;
+    background-color: #4a148c;
     color: white;
-    transition: left 0.3s ease;
-    padding: 20px;
+    transition: left 0.3s ease; /* Smooth slide-in */
+    padding-top: 60px; /* Space for the header */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar.active {
-    left: 0; /* Show sidebar */
+    left: 0; /* Slide in when active */
 }
 
 .sidebar ul {
@@ -51,38 +72,47 @@ header {
 }
 
 .sidebar ul li {
-    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
 }
 
 .sidebar ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #7b1fa2;
+    color: #ffeb3b;
 }
 
 #toggle-sidebar {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 20px;
-    font-size: 1.5rem;
-    background: transparent;
-    border: none;
+    background: #4a148c;
     color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
     cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 1100;
 }
 
-#close-sidebar {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.5rem;
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
+#toggle-sidebar:hover {
+    background: #7b1fa2;
 }
 
-/* Main content */
+/* Adjust main content to avoid overlap when sidebar is active */
+.sidebar.active ~ main {
+    margin-left: 250px; /* Adjust to sidebar width */
+    transition: margin-left 0.3s ease;
+}
+
 main {
     max-width: 1200px;
     width: 100%;
@@ -91,25 +121,30 @@ main {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: center; 
 }
 
-/* Product Grid */
+main h2 {
+    font-size: 2rem;
+    color: #4a148c; 
+    margin-bottom: 1.5rem;
+}
+
 #products-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .product {
-    background-color: #f7f7f7;
+    background-color: #f7f7f7; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: center;
     transition: transform 0.3s ease;
     width: calc(25% - 1rem);
-    margin: 0.5rem;
+    margin: 0.5rem; 
 }
 
 .product img {
@@ -132,7 +167,7 @@ main {
 }
 
 .product button {
-    background-color: #4a148c;
+    background-color: #4a148c; 
     color: white;
     border: none;
     padding: 0.8rem;
@@ -145,5 +180,5 @@ main {
 }
 
 .product button:hover {
-    background-color: #7b1fa2;
+    background-color: #7b1fa2; 
 }

@@ -11,6 +11,11 @@ const fetchToyData = async () => {
     }
 };
 
+document.getElementById('toggle-sidebar').addEventListener('click', () => {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active'); // Toggle 'active' class
+});
+
 const displayToys = (toys) => {
     const container = document.getElementById('product-container');
     container.innerHTML = ''; 
