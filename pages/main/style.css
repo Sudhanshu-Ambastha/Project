@@ -364,3 +364,16 @@ main {
         align-items: center;
     }
 }
+#footerLink {
+    display: block;
+    text-align: center; 
+}
+
+#footerIcon {
+    font-size: 24px; 
+    color: #333; 
+    transition: transform 0.3s ease; 
+}
+
+
+
