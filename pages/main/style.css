@@ -299,7 +299,7 @@ main {
 
 .footer-heading {
     font-size: 1.5rem;
-    color: #780670; /* Matches button color */
+    color: #780670; 
     margin-bottom: 10px;
 }
 
@@ -317,7 +317,7 @@ main {
 }
 
 .footer a:hover {
-    color: #780670; /* Matches button hover color */
+    color: #780670; 
 }
 
 .footer ul {
