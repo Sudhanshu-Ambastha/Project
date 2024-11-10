@@ -110,7 +110,7 @@ main {
     width: 100%;
     background: rgba(50, 47, 47, 0.8);
     color: #ffffff;
-    padding: 20px;
+    padding: 25px;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
