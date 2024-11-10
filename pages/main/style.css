@@ -329,11 +329,11 @@ main {
 }
 
 .footer-bottom {
-    background-color: #222;
+    background-color: #333;
     padding: 15px 0;
     width: 100%;
     text-align: center;
-    color: #b3b3b3;
+   color: #f1f1f1;
     font-size: 0.8rem;
     margin-top: 20px;
 }
