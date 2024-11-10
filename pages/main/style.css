@@ -93,17 +93,20 @@ main {
 
 
 .btn {
-    background-color: #780670;
-    color: white;
+    background-color: #ffffff; 
+    color: #780670; 
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px; 
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    font-weight: bold;
 }
 
 .btn:hover {
-    background-color: #65045d;
+    transform: translateY(-3px) scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 
