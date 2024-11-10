@@ -36,52 +36,6 @@ body {
         z-index: 1000;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
-    header.navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: fixed;
-        width: 100%;
-        height: 70px;
-        top: 0;
-        background-color: rgba(50, 47, 47, 0.9);
-        padding: 0 20px;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    }
-    
-    /* Nav links Styling */
-    nav.right-align {
-        display: flex;
-    }
-    
-    nav.right-align ul {
-        display: flex; /* Ensures links are horizontal */
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    nav.right-align ul li {
-        margin: 0 15px;
-    }
-    
-    nav.right-align ul li a {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
-    
-    nav.right-align ul li a:hover {
-        color: #ffeb3b;
-    }
-    
-    /* Adjust main content */
-    main {
-        text-align: center;
-        padding-top: 100px; /* To avoid overlapping with fixed navbar */
-    }
     
     header h1 {
         margin: 0;
@@ -93,7 +47,7 @@ body {
         padding: 0;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
     }
     
     nav ul li {
