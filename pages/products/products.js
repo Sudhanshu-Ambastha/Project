@@ -14,6 +14,14 @@ const fetchAllProducts = async () => {
     }
 };
 
+document.getElementById('toggleBtn').addEventListener('click', function() {  
+    const sidebar = document.getElementById('sidebar');  
+    const content = document.getElementById('content');  
+    
+    sidebar.classList.toggle('sidebar-active');
+    content.classList.toggle('content-shift');
+});  
+
 const displayProducts = (products) => {
     const mainContainer = document.getElementById('product-container');
     mainContainer.innerHTML = ''; 

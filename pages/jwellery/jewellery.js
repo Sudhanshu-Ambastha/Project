@@ -1,7 +1,7 @@
 import { fetchProductsByCategory } from '../main/api.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
-    const mainContainer = document.querySelector('main');
+    const mainContainer = document.querySelector('#product-container');
     
     const displayProducts = (products) => {
         mainContainer.innerHTML = '';
@@ -23,14 +23,20 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (products && products.length > 0) {
             displayProducts(products);
         } else {
-            console.warn('No products found or category mismatch.');
             mainContainer.innerHTML = '<p>No products available in this category.</p>';
         }
     } catch (error) {
-        console.error('Error displaying products:', error);
         mainContainer.innerHTML = '<p>Error fetching products. Please try again later.</p>';
     }
 });
+
+document.getElementById('toggleBtn').addEventListener('click', function() {  
+    const sidebar = document.getElementById('sidebar');  
+    const content = document.getElementById('content');  
+    
+    sidebar.classList.toggle('sidebar-active');
+    content.classList.toggle('content-shift');
+});  
 
 window.addToCart = (id) => {
     console.log('Added to cart:', id);

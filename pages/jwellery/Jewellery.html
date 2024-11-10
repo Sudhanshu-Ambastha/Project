@@ -9,25 +9,43 @@
     <link rel="stylesheet" href="./jewellery.css"> 
 </head>
 <body>
-    <header>
-        <h1>Jewelry</h1>
-        <nav>
+   <header class="navbar">
+        <div class="logo"><h1>ShopSpot</h1></div>
+        <nav class="right-align">
             <ul>
-                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i>Home</a></li>
-                <li><a href="../electronics/Electronics.html"><i class="fa-solid fa-laptop-medical"></i>Electronics</a></li>
-                <li><a href="../clothing/Clothing.html"><i class="fa-solid fa-shirt"></i>Clothing</a></li>
-                <li><a href="../home&garden/Home&Garden.html"><i class="fa-solid fa-seedling"></i>Home & Garden</a></li>
-                <li><a href="../books/Books.html"><i class="fa-solid fa-book"></i>Books</a></li>
-                <li><a href="#"><i class="fa-solid fa-gem"></i>Jewellery</a></li>
-                <li><a href="../toys/Toys.html"><i class="fa-solid fa-gamepad"></i>Toys</a></li>
+                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-box"></i> Products</a></li>
+                <li><a href="../contact/Contact.html"><i class="fa-sharp fa-solid fa-address-card"></i> Contact</a></li>
+                <li><a href="../cart/Cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li><a href="../login/Login.html"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Explore Our Exclusive Jewellery Collection</h2>
-        <div class="products-container" id="product-container"></div>
-    </main>
+        <button id="toggleBtn" class="toggle-btn">☰</button>  
+        <div id="sidebar" class="sidebar">  
+            <ul>  
+                <li><a href="../jewellery/Jewellery.html">Jewellery</a></li>  
+                <li><a href="../home&garden/Home&Garden.html">Home & Garden</a></li>  
+                <li><a href="../electronics/Electronics.html">Electronics</a></li>  
+                <li><a href="../clothing/Clothing.html">Clothing</a></li>  
+                <li><a href="../books/Books.html">Books</a></li>  
+            </ul>  
+        </div>  
+        <div id="content" class="content">  
+            <section class="product-header">
+                <h1>Our Jewlery Collection</h1>
+                <p>Explore a variety of high-quality products tailored to meet all your needs!</p>
+            </section>
+
+            <section class="product-container">
+                <div id="product-container" class="product-grid">
+                    <!-- Products will be displayed here -->
+                </div>
+            </section>
+        </div>
+    </main> 
     <script src="./jewellery.js" type="module"></script> 
 </body>
 </html>

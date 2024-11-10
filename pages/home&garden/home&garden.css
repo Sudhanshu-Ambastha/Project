@@ -1,3 +1,4 @@
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 16px;
 }
 
 header {
@@ -43,38 +45,82 @@ header nav ul li a:hover {
     color: #ffd54f;
 }
 
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    color: black;
+    padding: 15px;
+    position: fixed;
+    left: -250px; /* Initially hidden */
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.sidebar-active {
+    left: 0; /* Show sidebar */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #007bff;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 60px;
+    z-index: 1100;
+}
+
+/* Content Styles */
 main {
     padding: 2rem;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
+    margin-left: 0; /* Initially no margin */
+    transition: margin-left 0.3s ease;
 }
 
-main h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #388e3c;
-    margin-bottom: 1.5rem;
-}
-
+/* Product Grid Styles */
 #product-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
+/* Product Card Styles */
 .product {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
     transition: transform 0.3s ease;
-    width: 90%;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .product img {
@@ -82,10 +128,11 @@ main h2 {
     height: auto;
     border-radius: 8px;
     margin-bottom: 1rem;
+    object-fit: cover;
 }
 
 .product h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #333;
     margin-bottom: 0.5rem;
 }
@@ -93,11 +140,12 @@ main h2 {
 .product p {
     color: #757575;
     font-size: 1rem;
-    margin: 0.5rem 0;
+    margin-bottom: 1rem;
 }
 
+/* Add to Cart Button */
 .product button {
-    background-color: #388e3c;
+    background-color: #388e3c; /* Home & Garden theme color */
     color: white;
     border: none;
     padding: 0.8rem;
@@ -113,3 +161,24 @@ main h2 {
     background-color: #2e7d32;
 }
 
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .toggle-btn {
+        left: 20px;
+        top: 20px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}

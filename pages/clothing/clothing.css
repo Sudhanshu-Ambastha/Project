@@ -1,3 +1,4 @@
+/* General Reset and Styling */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
+/* Body Background */
 body {
     background: linear-gradient(to right, #f0f4f8, #e8eaf6); 
     display: flex;
@@ -12,6 +14,7 @@ body {
     align-items: center;
 }
 
+/* Header Styling */
 header {
     width: 100%;
     background: linear-gradient(to right, #4a148c, #7b1fa2); 
@@ -23,30 +26,63 @@ header {
     margin: 0;
 }
 
-header h1 {
-    margin-bottom: 10px;
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
 }
 
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.sidebar.active {
+    left: 0; /* Show sidebar */
+}
+
+.sidebar ul {
+    list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-header nav ul li a {
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
 }
 
-header nav ul li a:hover {
-    color: #ffeb3b; 
+#toggle-sidebar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
+#close-sidebar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main content */
 main {
     max-width: 1200px;
     width: 100%;
@@ -55,30 +91,25 @@ main {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; 
+    text-align: center;
 }
 
-main h2 {
-    font-size: 2rem;
-    color: #4a148c; 
-    margin-bottom: 1.5rem;
-}
-
+/* Product Grid */
 #products-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .product {
-    background-color: #f7f7f7; 
+    background-color: #f7f7f7;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: center;
     transition: transform 0.3s ease;
     width: calc(25% - 1rem);
-    margin: 0.5rem; 
+    margin: 0.5rem;
 }
 
 .product img {
@@ -101,7 +132,7 @@ main h2 {
 }
 
 .product button {
-    background-color: #4a148c; 
+    background-color: #4a148c;
     color: white;
     border: none;
     padding: 0.8rem;
@@ -114,5 +145,5 @@ main h2 {
 }
 
 .product button:hover {
-    background-color: #7b1fa2; 
+    background-color: #7b1fa2;
 }

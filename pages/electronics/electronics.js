@@ -1,10 +1,10 @@
-import { fetchProductsByCategory } from '../main/api.js'; 
+import { fetchProductsByCategory } from '../main/api.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
-    const mainContainer = document.querySelector('main');
+    const mainContainer = document.querySelector('#product-container'); // Get product container directly
 
     const displayProducts = (products) => {
-        mainContainer.innerHTML = ''; 
+        mainContainer.innerHTML = ''; // Clear previous content
         products.forEach((product) => {
             const productDiv = document.createElement('div');
             productDiv.classList.add('product');
@@ -24,14 +24,19 @@ document.addEventListener('DOMContentLoaded', async function () {
             displayProducts(products);
         } else {
             console.log('No products found in this category.');
-            mainContainer.innerHTML = '<p>No products available in this category.</p>'; 
+            mainContainer.innerHTML = '<p>No products available in this category.</p>';
         }
     } catch (error) {
         console.error('Error displaying products:', error);
-        mainContainer.innerHTML = '<p>Error fetching products. Please try again later.</p>'; 
+        mainContainer.innerHTML = '<p>Error fetching products. Please try again later.</p>';
     }
 });
 
-window.addToCart = (id) => {
-    console.log('Added to cart:', id);
-};
+// Sidebar toggle logic
+document.getElementById('toggleBtn').addEventListener('click', function() {  
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    sidebar.classList.toggle('sidebar-active');
+    content.classList.toggle('content-shift');
+});
+

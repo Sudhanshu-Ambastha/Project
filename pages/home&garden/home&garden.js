@@ -1,15 +1,23 @@
-document.addEventListener('DOMContentLoaded', async function() {
-    console.log('Home & Garden page loaded');
+document.addEventListener('DOMContentLoaded', async function () {
     const productsContainer = document.querySelector('#product-container');
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggleBtn');
 
+    // Sidebar Toggle Logic
+    toggleBtn.addEventListener('click', function () {
+        sidebar.classList.toggle('sidebar-active');
+        document.querySelector('main').classList.toggle('content-shift');
+    });
+
+    // Fetch and display products
     const fetchProducts = async () => {
         try {
-            const response = await fetch('https://dummyjson.com/products/category/home-decoration'); 
+            const response = await fetch('https://dummyjson.com/products/category/home-decoration');
             if (!response.ok) {
                 throw new Error('Failed to fetch products');
             }
             const products = await response.json();
-            displayProducts(products.products); 
+            displayProducts(products.products);
         } catch (error) {
             console.error('Error fetching products:', error);
             productsContainer.innerHTML = '<p>Error fetching products. Please try again later.</p>';
@@ -17,7 +25,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     };
 
     const displayProducts = (products) => {
-        productsContainer.innerHTML = '<h2>Transform Your Home with Our Garden Collection</h2>';
         products.forEach((product) => {
             const productDiv = document.createElement('div');
             productDiv.classList.add('product');
@@ -35,6 +42,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     await fetchProducts();
 });
 
+// Mock function for adding to cart
 window.addToCart = (id) => {
     console.log('Added to cart:', id);
 };

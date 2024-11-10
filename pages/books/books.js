@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', async function() {
     console.log('Book page loaded');
 
     const booksContainer = document.getElementById('books-container');
+    const sidebar = document.getElementById('sidebar');
+    const toggleButton = document.getElementById('toggle-sidebar');
 
+    // Function to fetch books
     const fetchBooks = async () => {
         try {
             const response = await fetch('https://openlibrary.org/subjects/fantasy.json?limit=12');
@@ -17,6 +20,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     };
 
+    // Function to display books
     const displayBooks = (books) => {
         booksContainer.innerHTML = '';
         books.forEach((book) => {
@@ -33,6 +37,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     };
 
+    // Toggle Sidebar Functionality
+    toggleButton.addEventListener('click', () => {
+        if (sidebar.style.left === '0px') {
+            sidebar.style.left = '-250px'; // Hide sidebar
+        } else {
+            sidebar.style.left = '0'; // Show sidebar
+        }
+    });
+
+    // Fetch books when page loads
     await fetchBooks();
 });
 

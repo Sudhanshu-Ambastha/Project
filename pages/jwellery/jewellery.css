@@ -1,3 +1,4 @@
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -43,25 +44,84 @@ header nav ul li a:hover {
     color: #ffd54f;
 }
 
+/* Main Layout */
 main {
     padding: 2rem;
     max-width: 1200px;
     width: 100%;
 }
 
-main h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #c2185b;
-    margin-bottom: 1.5rem;
+/* Sidebar Styles */
+.sidebar {  
+    width: 250px;  
+    height: 100vh;  
+    background-color: #f8f9fa;  
+    color: black;  
+    padding: 15px;  
+    position: fixed;  
+    left: -250px; /* Initially hidden */
+    transition: left 0.3s ease;
+    z-index: 1000;
+}  
+
+.sidebar.sidebar-active {  
+    left: 0; /* Show sidebar */
 }
 
-.products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.sidebar ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+
+.sidebar ul li {  
+    margin: 15px 0;
 }
 
+.sidebar ul li a {  
+    color: #333;  
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}  
+
+.sidebar ul li a:hover {  
+    color: #007bff;
+}  
+
+/* Toggle Button */
+.toggle-btn {  
+    font-size: 1.5rem;  
+    background: none;  
+    border: none;  
+    color: #333;  
+    cursor: pointer;  
+    position: fixed;  
+    left: 10px;  
+    top: 60px;  
+    z-index: 1100;  
+}
+
+/* Content Shifting */
+.content {  
+    margin-left: 0;  
+    padding: 20px;  
+    transition: margin-left 0.3s ease;
+}  
+
+.content.content-shift {
+    margin-left: 260px; 
+}
+
+/* Products Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Product Card Styles */
 .product {
     background-color: #ffffff;
     border-radius: 8px;
@@ -69,8 +129,6 @@ main h2 {
     padding: 1rem;
     text-align: center;
     transition: transform 0.3s ease;
-    width: calc(25% - 1rem);
-    margin: 1rem;
 }
 
 .product img {
@@ -78,6 +136,7 @@ main h2 {
     height: auto;
     border-radius: 8px;
     margin-bottom: 1rem;
+    object-fit: cover;
 }
 
 .product h3 {
@@ -92,8 +151,9 @@ main h2 {
     margin-bottom: 1rem;
 }
 
+/* Add to Cart Button */
 .product button {
-    background-color: #c2185b;
+    background-color: #c2185b; /* Jewelry-specific color */
     color: white;
     border: none;
     padding: 0.8rem;
@@ -108,4 +168,3 @@ main h2 {
 .product button:hover {
     background-color: #9c27b0;
 }
-
