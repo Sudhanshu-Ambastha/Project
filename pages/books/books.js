@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function () {
     console.log('Book page loaded');
 
     const booksContainer = document.getElementById('books-container');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 <p>Author: ${book.authors[0].name}</p>
                 <p>First Published: ${book.first_publish_year}</p>
                 <p>Price: $${book.price}</p>
-                <button onclick="addToCart('${book.key}')">Add to Cart</button>
+                <button onclick="addToCart('${book.key}', '${book.title}', '${book.price}', '${book.cover_id}')">Add to Cart</button>
             `;
             booksContainer.appendChild(bookDiv);
         });
@@ -66,6 +66,27 @@ document.addEventListener('DOMContentLoaded', async function() {
     await fetchBooks();
 });
 
-window.addToCart = (id) => {
+// Function to add an item to the cart
+window.addToCart = (id, title, price, cover_id) => {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Check if the item already exists in the cart
+    const existingItem = cartItems.find(item => item.id === id);
+    
+    if (existingItem) {
+        existingItem.quantity += 1; // Increase quantity if already in cart
+    } else {
+        const newItem = {
+            id: id,
+            title: title,
+            price: parseFloat(price),
+            quantity: 1,
+            image: `https://covers.openlibrary.org/b/id/${cover_id}-M.jpg`,
+        };
+        cartItems.push(newItem);
+    }
+
+    // Save updated cart items to localStorage
+    localStorage.setItem('cart', JSON.stringify(cartItems));
     console.log('Added to cart:', id);
 };

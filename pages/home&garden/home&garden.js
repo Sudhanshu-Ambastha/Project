@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <h3>${product.title}</h3>
                 <p>$${product.price}</p>
                 <p>${product.description}</p>
-                <button onclick="addToCart(${product.id})">Add to cart</button>
+                <button onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.thumbnail}')">Add to cart</button>
             `;
             productsContainer.appendChild(productDiv);
         });
@@ -42,7 +42,17 @@ document.addEventListener('DOMContentLoaded', async function () {
     await fetchProducts();
 });
 
-// Mock function for adding to cart
-window.addToCart = (id) => {
-    console.log('Added to cart:', id);
+window.addToCart = (id, title, price, thumbnail) => {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const existingProductIndex = cart.findIndex(item => item.id === id);
+    if (existingProductIndex !== -1) {
+        cart[existingProductIndex].quantity += 1;
+    } else {
+        cart.push({ id, title, price, thumbnail, quantity: 1 });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(`${title} added to cart.`);
 };
