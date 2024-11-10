@@ -102,4 +102,4 @@ document.addEventListener('DOMContentLoaded', function () {
         aboutText.style.opacity = '0';
     }
 });
-
+})
