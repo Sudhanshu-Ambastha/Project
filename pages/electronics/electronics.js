@@ -39,4 +39,3 @@ document.getElementById('toggleBtn').addEventListener('click', function() {
     sidebar.classList.toggle('sidebar-active');
     content.classList.toggle('content-shift');
 });
-
