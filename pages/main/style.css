@@ -304,14 +304,14 @@ main {
 }
 
 .footer p, .footer ul, .footer li {
-    color: #b3b3b3;
+    color: #ffffff;
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 10px;
 }
 
 .footer a {
-    color: #f1f1f1;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s; 
 }
