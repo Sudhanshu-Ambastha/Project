@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
-        landingText.style.transform = `translateY(-${scrollY * 0.5}px)`;
+        landingText.style.transform = ⁠ translateY(-${scrollY * 0.5}px) ⁠;
     });
 
     const fetchProducts = async () => {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${productData.title} added to cart`);
+            alert(⁠ ${productData.title} added to cart ⁠);
         }
     };
 
@@ -88,12 +88,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const scrollEffect = Math.min(1, (window.innerHeight - aboutSection.top) / window.innerHeight);
         
 
-        aboutImage.style.transform = `translateX(${(1 - scrollEffect) * -100}%)`;
-        aboutImage.style.opacity = `${scrollEffect}`;
+        aboutImage.style.transform = ⁠ translateX(${(1 - scrollEffect) * -100}%) ⁠;
+        aboutImage.style.opacity = ⁠ ${scrollEffect} ⁠;
         
 
-        aboutText.style.transform = `translateX(${(1 - scrollEffect) * 100}%)`;
-        aboutText.style.opacity = `${scrollEffect}`;
+        aboutText.style.transform = ⁠ translateX(${(1 - scrollEffect) * 100}%) ⁠;
+        aboutText.style.opacity = ⁠ ${scrollEffect} ⁠;
     } else {
 
         aboutImage.style.transform = 'translateX(-100%)';
@@ -102,4 +102,4 @@ document.addEventListener('DOMContentLoaded', function () {
         aboutText.style.opacity = '0';
     }
 });
-})
+});
