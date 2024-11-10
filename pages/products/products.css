@@ -6,25 +6,32 @@ body {
     color: #333;
 }
 
-.logo h1 {
-    display: inline;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2C3E50;
-    margin: 0;
-    padding: 0;
-}
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
-   background-color: rgba(50, 47, 47, 0.8)
-    height: 3rem;
+    background-color: #3498DB;
+    height: 4rem;
     color: #FFF;
 }
 
+.logo h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2C3E50;
+    margin-top: 5rem;
+    margin-right: -25rem;
+    padding: 0;
+    padding-bottom: 5rem;
+}
+
+.right-align{
+    margin-top: 4rem;
+}
 .navbar .right-align ul {
     list-style: none;
     margin: 0;
