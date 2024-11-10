@@ -5,37 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | E-Commerce Website</title>
     <link rel="icon" href="../../AppIcon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <header class="navbar">
         <div class="logo"><h1>ShopSpot</h1></div>
         <nav class="right-align">
             <ul>
-                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i> Home</a></li>
-                <li><a href="../products/Products.html"><i class="fa-solid fa-box"></i> Products</a></li>
-                <li><a href="../contact/Contact.html"><i class="fa-sharp fa-solid fa-address-card"></i> Contact</a></li>
-                <li><a href="../cart/Cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../products/Products.html">Products</a></li>
+                <li><a href="../contact/Contact.html">Contact</a></li>
+                <li><a href="../cart/Cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
+
     </header>
     <main>
-        <div class="login-container">
-            <form action="#" method="post">
-                <h2>Welcome Back</h2>
+        <div class="login-form">
+            <form action="login-process.php" method="post">
+                <h2>Login</h2>
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" class="input-field" required>
+                <input type="text" id="username" name="username" required>
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" class="input-field" required>
+                <input type="password" id="password" name="password" required>
 
                 <button type="submit">Login</button>
-                <p>Don't have an account? <a href="../signup/Signup.html">Sign Up</a></p>
+                <p>Don't have an account? <a href="../signup/sign-up.html">Sign Up</a></p>
             </form>
         </div>
     </main>
-    <script src="./login.js"></script>
 </body>
 </html>
