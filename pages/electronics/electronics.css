@@ -45,37 +45,45 @@ body {
 }
 
 
-.sidebar {
+/* Sidebar styling */
+#sidebar {
     position: fixed;
     top: 0;
-    left: -250px; 
+    left: -250px; /* Initially hidden to the left */
     width: 250px;
     height: 100%;
     background: #0d47a1;
     color: white;
-    transition: left 0.3s ease;
+    transition: left 0.3s ease; /* Smooth slide-in transition */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    padding-top: 60px;
+    padding-top: 60px; /* Space at the top to avoid overlap with header */
+    z-index: 1000;
 }
 
-.sidebar ul {
+#sidebar ul {
     list-style-type: none;
-    padding: 20px;
+    padding: 0;
 }
 
-.sidebar ul li a {
+#sidebar ul li {
+    margin: 20px 0;
+}
+
+#sidebar ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
     display: block;
-    padding: 10px 0;
     transition: background 0.3s ease;
 }
 
-.sidebar ul li a:hover {
+#sidebar ul li a:hover {
     background-color: #1976d2;
 }
 
-.toggle-btn {
+/* Sidebar toggle button styling */
+#toggleBtn {
     background: none;
     border: none;
     color: #0d47a1;
@@ -84,8 +92,20 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 1000;
+    z-index: 1100; /* Ensure it's above other content */
 }
+
+/* Sidebar active state */
+.sidebar-active {
+    left: 0; /* Slide in the sidebar */
+}
+
+/* Content shift when sidebar is visible */
+.content-shift {
+    margin-left: 250px; /* Shift content to the right when sidebar is visible */
+    transition: margin-left 0.3s ease;
+}
+
 
 main {
     padding: 2rem;
