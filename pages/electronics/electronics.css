@@ -45,77 +45,72 @@ body {
 }
 
 
-/* Sidebar styling */
-#sidebar {
+.sidebar {
     position: fixed;
-    top: 0;
-    left: -250px; /* Initially hidden to the left */
+    left: -250px; 
+    top: 30px;
+    margin-top: 3.3rem;
     width: 250px;
     height: 100%;
-    background: #0d47a1;
+    background-color: #2C3E50;
     color: white;
-    transition: left 0.3s ease; /* Smooth slide-in transition */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    padding-top: 60px; /* Space at the top to avoid overlap with header */
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495E;
+}
+
+.toggle-btn {
+    display:block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
     z-index: 1000;
 }
 
-#sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#sidebar ul li {
-    margin: 20px 0;
-}
-
-#sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    display: block;
-    transition: background 0.3s ease;
-}
-
-#sidebar ul li a:hover {
-    background-color: #1976d2;
-}
-
-/* Sidebar toggle button styling */
-#toggleBtn {
-    background: none;
-    border: none;
-    color: #0d47a1;
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1100; /* Ensure it's above other content */
-}
-
-/* Sidebar active state */
-.sidebar-active {
-    left: 0; /* Slide in the sidebar */
-}
-
-/* Content shift when sidebar is visible */
-.content-shift {
-    margin-left: 250px; /* Shift content to the right when sidebar is visible */
+.content {
+    margin-left: 0;
     transition: margin-left 0.3s ease;
 }
 
+.product-header {
+    text-align: center;
+}
 
 main {
     padding: 2rem;
     max-width: 1200px;
     width: 100%;
     margin-top: 40px;
-}
-
-.product-header {
-    text-align: center;
 }
 
 .product-header h1 {
@@ -190,6 +185,13 @@ main {
 }
 
 
-.sidebar-active {
-    left: 0; 
+@media (max-width: 768px) {
+    .navbar .right-align ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
 }
