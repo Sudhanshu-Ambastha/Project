@@ -299,12 +299,12 @@ main {
 
 .footer-heading {
     font-size: 1.5rem;
-    color: #ffff; 
+    color: #ffffff; 
     margin-bottom: 10px;
 }
 
 .footer p, .footer ul, .footer li {
-    color: #ffff;
+    color: #b3b3b3;
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 10px;
@@ -313,12 +313,12 @@ main {
 .footer a {
     color: #f1f1f1;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s; 
 }
 
 .footer a:hover {
     color: #780670; 
-    font-size:10px;
+    transform: translateY(-2px); 
 }
 
 .footer ul {
