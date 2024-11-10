@@ -48,11 +48,12 @@ header nav ul li a:hover {
 /* Sidebar Styles */
 .sidebar {
     width: 250px;
-    height: 100vh;
+    height: 100%;
     background-color: #f8f9fa;
     color: black;
     padding: 15px;
     position: fixed;
+    margin-top: -31px;
     left: -250px; /* Initially hidden */
     transition: left 0.3s ease;
     z-index: 1000;
