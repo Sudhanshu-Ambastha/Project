@@ -169,7 +169,7 @@ main {
     background-color: #1976d2;
 }
 
-/* Sidebar active class */
+
 .sidebar-active {
-    left: 0; /* Sidebar slides in when active */
+    left: 0; 
 }
