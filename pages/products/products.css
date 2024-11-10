@@ -51,7 +51,7 @@ body {
 .sidebar {
     position: fixed;
     left: -250px; 
-    top: 0;
+    top: 30px;
     margin-top: 4.2rem;
     width: 250px;
     height: 100%;
