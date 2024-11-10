@@ -1,4 +1,4 @@
-/* Reset some basic styling */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,62 +6,56 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body styling */
 body {
-    background: linear-gradient(to right, #e3f2fd, #bbdefb); 
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Navbar styling */
-header {
+.navbar {
     width: 100%;
-    background: linear-gradient(to right, #0d47a1, #1976d2); 
+    background: linear-gradient(to right, #0d47a1, #1976d2);
     color: white;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
+.navbar .logo h1 {
     margin-bottom: 10px;
 }
 
-header nav ul {
+.navbar nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-header nav ul li a {
+.navbar nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    color: #ffeb3b; 
+.navbar nav ul li a:hover {
+    color: #ffeb3b;
 }
 
-/* Sidebar styling */
+
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Sidebar starts off-screen */
+    left: -250px; 
     width: 250px;
     height: 100%;
     background: #0d47a1;
     color: white;
     transition: left 0.3s ease;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    padding-top: 60px; /* To avoid overlap with navbar */
-}
-
-.sidebar-active {
-    left: 0; /* Sidebar slides in when active */
+    padding-top: 60px;
 }
 
 .sidebar ul {
@@ -81,7 +75,6 @@ header nav ul li a:hover {
     background-color: #1976d2;
 }
 
-/* Sidebar toggle button styling */
 .toggle-btn {
     background: none;
     border: none;
@@ -91,30 +84,46 @@ header nav ul li a:hover {
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 1000; /* Ensure it's above the content */
+    z-index: 1000;
 }
 
-/* Content styling */
 main {
     padding: 2rem;
     max-width: 1200px;
     width: 100%;
-    transition: margin-left 0.3s ease;
+    margin-top: 40px;
 }
 
-.content-shift {
-    margin-left: 250px; /* Shift content when sidebar is visible */
+.product-header {
+    text-align: center;
 }
 
-/* Product grid styling */
+.product-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product-header p {
+    color: #757575;
+    font-size: 1.1rem;
+    margin-bottom: 15px; 
+}
 .product-container {
     display: flex;
-    grid-template-row: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust based on screen size */
-    gap: 20px;
-    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
 }
 
-/* Individual product styling */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; 
+}
+
+
 .product {
     background-color: #ffffff;
     border-radius: 8px;
@@ -158,4 +167,9 @@ main {
 
 .product button:hover {
     background-color: #1976d2;
+}
+
+/* Sidebar active class */
+.sidebar-active {
+    left: 0; /* Sidebar slides in when active */
 }
