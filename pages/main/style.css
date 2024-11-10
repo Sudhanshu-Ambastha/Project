@@ -317,9 +317,11 @@ main {
 }
 
 .footer a:hover {
- 
-    transform: translateY(-2px); 
+    color: #ffffff; 
+    transform: translateY(-3px) scale(1.05); 
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); 
 }
+
 
 .footer ul {
     list-style-type: none;
