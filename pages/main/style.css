@@ -331,6 +331,12 @@ main {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); 
 }
 
+#footerIcon{
+    color: #ffffff;
+    font-size: 40px;
+    margin-right: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
 
 .footer ul {
     list-style-type: none;
