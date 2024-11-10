@@ -20,7 +20,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-   background: rgba(50, 47, 47, 0.8)
+   background-color: rgba(50, 47, 47, 0.8)
     height: 3rem;
     color: #FFF;
 }
