@@ -1,10 +1,91 @@
-
-body {
-    font-family: "Open Sans", sans-serif;
-    background: white;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #f4f4f4; 
+    padding-top: 80px; 
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-image: url('./pic.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-form {
+    background-color:#f1f1f1; 
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.login-form h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
     color: #333;
+}
+
+
+.login-form label {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+.login-form input[type="text"], 
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: rgba(50, 47, 47, 0.8);
+    color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+
+.login-form button {
+    background-color: rgba(50, 47, 47, 0.8);
+
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form button:hover {
+    transform: translateY(-3px) scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 
@@ -12,120 +93,65 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    height: 60px;
+    position: fixed; 
+    height: 80px;
     top: 0;
     width: 100%;
-    background: rgba(50, 47, 47, 0.9);
+    background: rgba(50, 47, 47, 0.8);
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 20px;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.navbar .logo h1 {
-    font-size: 1.8rem;
+.navbar .logo {
+    font-size: 16px;
     font-weight: bold;
+    color: white;
 }
 
-.navbar nav ul {
-    list-style-type: none;
-    padding: 0;
+.right-align {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
     gap: 15px;
-    margin: 0;
 }
 
-.navbar nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.navbar nav ul li a:hover {
-    color: #ffeb3b;
+nav ul li a:hover,
+nav ul li a:active {
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.436);
+    transform: scale(1.1);
 }
 
-
-main {
+body {
     padding-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px);
 }
 
 
-.login-container {
-    background-color: #ffffff;
-    padding: 30px 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
+@media (max-width: 768px) {
+    .login-form {
+        padding: 20px;
+        max-width: 100%;
+    }
 
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-h2 {
-    font-size: 2rem;
-    color: #0f4c75;
-    margin-bottom: 20px;
-}
-
-
-label {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 5px;
-    display: inline-block;
-}
-
-.input-field {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #333;
-}
-
-.input-field:focus {
-    border-color: #780670;
-    outline: none;
-}
-
-
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #780670; 
-    color: white;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #65045d; 
-}
-
-
-p {
-    font-size: 1rem;
-    color: #555;
-}
-
-p a {
-    color: #780670;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-p a:hover {
-    color: #65045d; 
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
