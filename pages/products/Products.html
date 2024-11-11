@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./products.css">
 </head>
-
 <body>
     <header class="navbar">
         <div class="logo"><h1>ShopSpot</h1></div>
@@ -25,32 +23,32 @@
     </header>
 
     <main>
-        <section class="product-header">
-            <h1>Our Products</h1>
-            <p>Explore a variety of high-quality products tailored to meet all your needs!</p>
-        </section>
+        <button id="toggleBtn" class="toggle-btn">☰</button>  
+        <div id="sidebar" class="sidebar">  
+            <ul>  
+                <li><a href="../jwellery/Jewellery.html">Jwellery</a></li>  
+                <li><a href="../home&garden/Home&Garden.html">Home&Garden</a></li>  
+                <li><a href="../electronics/Electronics.html">Electronics</a></li>  
+                <li><a href="../clothing/Clothing.html">Clothings</a></li>  
+                <li><a href="../books/Books.html">Books</a></li>  
+                <li><a href="../toys/Toys.html">Toys</a></li>  
+            </ul>  
+        </div>  
+        <div id="content" class="content">  
+            <section class="product-header">
+                <h1>Our Products</h1>
+                <p>Explore a variety of high-quality products tailored to meet all your needs!</p>
+            </section>
 
-        <section class="product-container">
-            <!-- <div id="filter-container">
-                <h3>Filter by Category</h3>
-                <select id="category-filter">
-                    <option value="">All</option>
-                    <option value="books">Books</option>
-                    <option value="jewelery">Jewelry</option>
-                    <option value="clothing">Clothing</option>
-                    <option value="home-garden">Home & Garden</option>
-                    <option value="toys">Toys</option>
-                    <option value="electronics">Electronics</option>
-                </select>
-            </div> -->
-
-            <div id="product-container" class="product-grid">
-                <!-- Products will be displayed here -->
-            </div>
-        </section>
+            <section class="product-container">
+                <div id="product-container" class="product-grid">
+                    <!-- Products will be displayed here -->
+                </div>
+            </section>
+        </div>
     </main>
 
     <script type="module" src="./products.js"></script>
 </body>
-
 </html>
+

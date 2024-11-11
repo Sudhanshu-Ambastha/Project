@@ -13,22 +13,34 @@
         <h1>Books</h1>
         <nav>
             <ul>
-                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i>Home</a></li>
-                <li><a href="../electronics/Electronics.html"><i class="fa-solid fa-laptop-medical"></i>Electronics</a></li>
-                <li><a href="../clothing/Clothing.html"><i class="fa-solid fa-shirt"></i>Clothing</a></li>
-                <li><a href="../home&garden/Home&Garden.html"><i class="fa-solid fa-seedling"></i>Home & Garden</a></li>
-                <li><a href="#"><i class="fa-solid fa-book"></i>Books</a></li>
-                <li><a href="../toys/Toys.html"><i class="fa-solid fa-gamepad"></i>Toys</a></li>
-                <li><a href="../jwellery/Jewellery.html"><i class="fa-solid fa-gem"></i>Jewellery</a></li>
+                <li><a href="../../index.html"><i class="fa-sharp fa-solid fa-house"></i> Home</a></li>
+                <li><a href="../products/Products.html"><i class="fa-solid fa-box"></i> Products</a></li>
+                <li><a href="../contact/Contact.html"><i class="fa-sharp fa-solid fa-address-card"></i> Contact</a></li>
+                <li><a href="../cart/Cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li><a href="../login/Login.html"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a></li>
             </ul>
         </nav>
+        <button id="toggle-sidebar">☰</button> <!-- Toggle Button -->
     </header>
 
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="../jwellery/Jewellery.html">Jwellery</a></li>  
+            <li><a href="../home&garden/Home&Garden.html">Home&Garden</a></li>  
+            <li><a href="../electronics/Electronics.html">Electronics</a></li>  
+            <li><a href="../clothing/Clothing.html">Clothings</a></li>  
+            <li><a href="#">Books</a></li>  
+            <li><a href="../toys/Toys.html">Toys</a></li>  
+        </ul>
+    </div>
+
+    <!-- Main Content -->
     <main>
         <h2>Discover Your Next Read</h2>
         <div id="books-container"></div>
     </main>
     
-    <script src="./book.js"></script>
+    <script src="./books.js"></script>
 </body>
 </html>

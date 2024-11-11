@@ -1,140 +1,203 @@
 body {
     font-family: "Open Sans", sans-serif;
-     background-color: #ECF0F1  ;
-        
-        margin: 0;
-        padding: 0;
-        color: #333;
+    background-color: #ECF0F1;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3498DB;
+    height: 4rem;
+    color: #FFF;
+}
+
+.logo h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 5rem;
+    margin-right: -25rem;
+    padding: 0;
+    padding-bottom: 5rem;
+}
+
+.right-align{
+    margin-top: 4rem;
+}
+.navbar .right-align ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .right-align ul li {
+    display: inline;
+}
+
+.navbar .right-align ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .right-align ul li a:hover {
+    color: #2980B9;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px; 
+    top: 30px;
+    margin-top: 3.3rem;
+    width: 250px;
+    height: 100%;
+    background-color: #2C3E50;
+    color: white;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495E;
+}
+
+.toggle-btn {
+    display:block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.product-header {
+    font-size: large;
+    color: #2C3E50;
+    padding: 30px;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    padding: 50px;
+    margin-top: 4px;
+}
+
+#product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.product {
+    background-color: #BDC3C7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.25rem;
+    color: #0f4c75;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #E74C3C;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .navbar .right-align ul {
+        flex-direction: column;
+        gap: 10px;
     }
-    .logo h1{
-        display:inline;
-        font-size: 1.5rem;
-        font-weight: bold;
-    
+
+    .sidebar {
+        width: 200px;
     }
-    .product-header{
-        font-size: large;
-        color: #2C3E50 ;
-    
-        padding: 30px;
-        text-align: center;
-    
-    
-    }
-    
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: fixed; 
-        height: 50px;
-        top: 0;
-        width: 100%;
-        background: rgba(50, 47, 47, 0.8);
-        color: #ffffff;
-        padding: 20px;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    }
-    
-    header h1 {
-        margin: 0;
-        font-size: 2rem;
-    }
-    
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    nav ul li {
-        margin: 0 15px;
-    }
-    
-    nav ul li a {
-        color: white ;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
-    
-    nav ul li a:hover {
-        color: #ffeb3b;
-    }
-    
-    main {
-        text-align: center;
-        padding: 50px;
-        margin-top: 4px;
-    }
-    
-    
-    #product-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
-        padding: 0 20px;
-    }
-    
-    
-    .product {
-        background-color: #BDC3C7 ;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 280px;
-        overflow: hidden;
-        text-align: center;
-        transition: transform 0.3s ease;
-        padding: 20px;
-        border: 1px solid #ddd;
-    }
-    
-    .product:hover {
-        transform: translateY(-5px);
-    }
-    
-    .product img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 15px;
-    }
-    
-    .product h3 {
-        font-size: 1.25rem;
-        color: #0f4c75; 
-        margin: 10px 0;
-    }
-    
-    .product p {
-        font-size: 1rem;
-        color: #555;
-        margin-bottom: 10px;
-    }
-    
-    .error-message {
-        color: #d9534f;
-        font-size: 1.1rem;
-        font-weight: bold;
-    }
-    
-    .btn {
-        background-color: #E74C3C ;
-        color: white;
-        padding: 8px 12px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-        transition: background-color 0.3s;
-    }
-    
-    .btn:hover {
-        background-color: #555;
-    }
+}

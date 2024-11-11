@@ -1,6 +1,7 @@
 
 body {
     font-family: "Open Sans", sans-serif;
+    background-color: #ECF0F1;
    
     margin: 0;
     padding: 0;
@@ -18,7 +19,7 @@ body {
     width: 100%;
     background: rgba(50, 47, 47, 0.9);
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 25px;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -44,14 +45,14 @@ body {
 }
 
 .navbar nav ul li a:hover {
-    color: #ffeb3b; 
+    color: #333; 
 }
 
 
 .cart-header {
     text-align: center;
     padding: 100px 20px 30px; 
-    background-color: #f4f1de;
+    background-color: #ECF0F1;
 }
 
 .cart-header h1 {
@@ -90,7 +91,7 @@ body {
 }
 
 .remove-btn {
-    background-color: #780670; 
+    background-color: #E74C3C; 
     color: white;
     padding: 8px 12px;
     border-radius: 5px;
@@ -111,7 +112,7 @@ body {
 }
 
 .checkout-btn {
-    background-color: #780670;
+    background-color: #E74C3C;
     color: white;
     padding: 12px 18px;
     border-radius: 5px;
@@ -123,5 +124,5 @@ body {
 }
 
 .checkout-btn:hover {
-    background-color: #65045d;
+    background-color: #2C3E50;
 }

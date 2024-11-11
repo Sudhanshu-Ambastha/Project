@@ -34,6 +34,59 @@ nav ul li a:hover {
     color: #ffeb3b; 
 }
 
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background: #6a11cb;
+    color: #fff;
+    overflow: auto;
+    transition: 0.3s; /* Smooth slide in/out */
+    padding-top: 60px;
+    z-index: 2;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    background-color: #2575fc;
+}
+
+#toggle-sidebar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Sidebar open state */
+.sidebar.active {
+    left: 0; /* Slide in when active */
+}
+
 main {
     text-align: center;
     padding: 40px;

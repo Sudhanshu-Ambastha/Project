@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | E-Commerce Website</title>
+    <link rel="icon" href="../../AppIcon.png" type="image/png">
+    <link rel="stylesheet" href="signup.css">
+
+        
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo"><h1>ShopSpot</h1></div>
+        <nav class="right-align">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../products/Products.html">Products</a></li>
+                <li><a href="../contact/Contact.html">Contact</a></li>
+                <li><a href="../cart/Cart.html">Cart</a></li>
+                <li><a href="../login/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="signup-container">
+            <form action="signup-process.php" method="POST">
+                <h2>Create an Account</h2>
+                
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="input-field" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="input-field" required>
+
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" class="input-field" required>
+
+                <button type="submit">Sign Up</button>
+
+                <p>Already have an account? <a href="../login/login.html">Login</a></p>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

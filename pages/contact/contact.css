@@ -1,7 +1,7 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-    background: white; 
+    background: #ECF0F1 ; 
     margin: 0;
     padding: 0;
     color: #333;
@@ -18,7 +18,7 @@ header {
     width: 100%;
     background: rgba(50, 47, 47, 0.9); 
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 25px;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -51,7 +51,7 @@ header nav ul li a:hover {
 .contact-header {
     text-align: center;
     padding: 100px 20px 30px;
-    background-color: white;
+    background-color: #ECF0F1 ;
     
 }
 
@@ -84,7 +84,7 @@ main {
 #contactForm {
     background-color: #ffffff;
     padding: 20px 40px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
@@ -114,7 +114,7 @@ main {
 }
 
 .btn {
-    background-color: #780670; 
+    background-color: #E74C3C; 
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -128,5 +128,5 @@ main {
 }
 
 .btn:hover {
-    background-color: #65045d; 
+    background-color: #0f4c75; 
 }
