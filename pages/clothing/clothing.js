@@ -49,7 +49,7 @@ window.addToCart = async (id) => {
 
     const product = allClothing.find(product => product.id === id);
 
-    if (!product || ) {
+    if (!product) {
         console.error('Product not found!');
         return;
     }
@@ -67,3 +67,4 @@ window.addToCart = async (id) => {
 
     alert(`${product.title} added to cart.`);
 };
+
